@@ -1,0 +1,215 @@
+:root {
+    --faded-black: #2E3336;
+    --dark-grey: #606467;
+    --light-grey: #C8D1D8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--dark-grey);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #DBE3E8;
+    color: var(--dark-grey);
+
+    font-size: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.photo-app {
+    position: relative;
+    aspect-ratio: 1.25 / 1;
+
+    min-width: 750px;
+    width: 750px;
+
+    background-color: #fff;
+    box-shadow: #EFF2F4 -10px -10px 20px 10px,
+                #C2CFD9 10px 10px 20px 10px
+    ;
+    
+    border-radius: 20px;
+    padding: 32px 84px;
+}
+
+.nav-item {
+    color: inherit;
+    font-size: 1em;
+
+    list-style: none;
+    padding: 0px 0px 5px 18px ;
+}
+
+.nav-item a, .nav-item a:visited, .nav-item a:active {
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    text-decoration: underline 2px;
+    text-underline-offset: .5em;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.nav-item:active {
+    scale: 1.1;
+}
+
+.search-upload-container {
+    padding: 50px 0;
+    color: #AAB8C2;
+}
+
+.search-bar {
+    width: 16em;
+    font-size: 1.2em;
+    border-bottom: 1px solid var(--light-grey);
+    padding-bottom: 12px;
+    cursor: text;
+}
+
+.search-bar p, .search-bar i {
+    color: var(--light-grey);
+    padding: 0 12px;
+}
+
+button {
+    color: var(--light-grey);
+    background-color: var(--faded-black);
+
+    font-size: 1.2em;
+    padding: 12px 40px;
+
+    border: none;
+    border-radius: 4px;
+
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 10px -7px;
+    cursor: pointer;
+}
+
+button:hover {
+    scale: 1.03;
+}
+
+button:active {
+    box-shadow: none;
+    transition: all ease .5s;
+}
+
+.invisible {
+    display: none !important;
+}
+
+.img, .photo-category img {
+    width: 190px;
+    height: 150px;
+    margin-top: 5px;
+    position: relative;
+}
+
+.img:hover, .photo-category img:hover {
+    scale: 1.05;
+}
+
+/* Utils */
+
+.pink {
+    background-color: pink;
+}
+
+.green{
+    background-color: lightseagreen;
+}
+
+.plum {
+    background-color: plum;
+}
+
+.blue {
+    background-color: aqua;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 650px) {
+    .photo-app {
+        aspect-ratio: unset;
+        max-height: 80%;
+
+        min-width: 400px;
+        width: 500px;
+        padding: 30px;
+        overflow: scroll;
+    }
+
+    .photo-category {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-upload-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    button {
+        margin-top: 25px;
+        font-size: 1em;
+        padding: 10px 36px;
+    }
+
+    .img, .photo-category img {
+        margin: 5px;
+
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 12em;
+        font-size: 1em;
+    }
+
+}
